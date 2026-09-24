@@ -34,4 +34,4 @@ const Card = ({image,name,price}) => {
     )
 }
 
-export default Card
+export default Card;
