@@ -1,15 +1,15 @@
-import React from 'react'
-import CategoryPage from '../Catagorypage/Catagorypage'
-import bgSeafood from '../../assets/seafood-banner.jpg'
+import React from 'react';
+import CategoryPage from '../CategoryPage/CategoryPage';
+import bgSeafood from '../../assets/seafood-banner.jpg';
 
 const SeaFood = () => {
   return (
     <CategoryPage
       title="Meat & SeaFood"
       bgimage={bgSeafood}
-      categories={['SeaFood','Meat']}
+      categories={['SeaFood', 'Meat']}
     />
-  )
-}
+  );
+};
 
-export default SeaFood
+export default SeaFood;

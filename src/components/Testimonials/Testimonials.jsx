@@ -1,42 +1,40 @@
-import React from "react";
-import Heading from "../Heding/Heading";
-import { FaStar } from "react-icons/fa";
+import React from 'react';
+import { FaStar } from 'react-icons/fa';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { Pagination, Autoplay } from 'swiper/modules';
+import 'swiper/css';
+import 'swiper/css/pagination';
+import Heading from '../Heading/Heading';
 
-import Customer1 from "../../assets/customer1.jpg";
-import Customer2 from "../../assets/customer2.jpg";
-import Customer3 from "../../assets/customer3.jpg";
-import Customer4 from "../../assets/customer4.jpg";
-import Customer5 from "../../assets/customer5.jpg";
-
-import { Swiper, SwiperSlide } from "swiper/react";
-import { Pagination, Autoplay } from "swiper/modules";
-
-import "swiper/css";
-import "swiper/css/pagination";
+import Customer1 from '../../assets/customer1.jpg';
+import Customer2 from '../../assets/customer2.jpg';
+import Customer3 from '../../assets/customer3.jpg';
+import Customer4 from '../../assets/customer4.jpg';
+import Customer5 from '../../assets/customer5.jpg';
 
 const reviews = [
   {
     id: 1,
-    name: "Tejashri Patil",
-    profession: "Food Blogger",
+    name: 'Tejashri Patil',
+    profession: 'Food Blogger',
     rating: 5,
     image: Customer1,
     review:
-      "Amazing food quality and super fast delivery. The packaging was excellent and the taste exceeded my expectations.",
+      'Amazing food quality and super fast delivery. The packaging was excellent and the taste exceeded my expectations.',
   },
   {
     id: 2,
-    name: "Dheeraj Mane",
-    profession: "Chef",
+    name: 'Dheeraj Mane',
+    profession: 'Chef',
     rating: 4,
     image: Customer2,
     review:
-      "I love the variety of dishes available. Everything arrives fresh and the service is always reliable.",
+      'I love the variety of dishes available. Everything arrives fresh and the service is always reliable.',
   },
   {
     id: 3,
-    name: "Aishwarya Mithari",
-    profession: "Model",
+    name: 'Aishwarya Mithari',
+    profession: 'Model',
     rating: 5,
     image: Customer3,
     review:
@@ -44,21 +42,21 @@ const reviews = [
   },
   {
     id: 4,
-    name: "Karan Kundra",
-    profession: "Manager",
+    name: 'Karan Kundra',
+    profession: 'Manager',
     rating: 5,
     image: Customer4,
     review:
-      "The app is user-friendly and the food is always delivered on time. Highly recommended for busy professionals.",
+      'The app is user-friendly and the food is always delivered on time. Highly recommended for busy professionals.',
   },
   {
     id: 5,
-    name: "Sakshi Patil",
-    profession: "Chef",
+    name: 'Sakshi Patil',
+    profession: 'Chef',
     rating: 4,
     image: Customer5,
     review:
-      "Delicious meals, attractive presentation, and excellent customer support. Will definitely order again.",
+      'Delicious meals, attractive presentation, and excellent customer support. Will definitely order again.',
   },
 ];
 
@@ -66,36 +64,24 @@ const Testimonials = () => {
   return (
     <section className="py-20 bg-gradient-to-b from-orange-50 to-white">
       <div className="max-w-7xl mx-auto px-5 lg:px-10">
-
         <Heading highlight="Customers" heading="Testimonials" />
 
         <Swiper
           slidesPerView={1}
           spaceBetween={25}
           pagination={{ clickable: true }}
-          autoplay={{
-            delay: 3000,
-            disableOnInteraction: false,
-          }}
+          autoplay={{ delay: 3000, disableOnInteraction: false }}
           modules={[Pagination, Autoplay]}
           breakpoints={{
-            640: {
-              slidesPerView: 1,
-            },
-            768: {
-              slidesPerView: 2,
-            },
-            1024: {
-              slidesPerView: 3,
-            },
+            640: { slidesPerView: 1 },
+            768: { slidesPerView: 2 },
+            1024: { slidesPerView: 3 },
           }}
           className="mt-14 pb-14"
         >
           {reviews.map((item) => (
             <SwiperSlide key={item.id}>
               <div className="bg-white rounded-3xl p-6 shadow-lg hover:shadow-2xl hover:-translate-y-2 transition-all duration-300 h-full">
-
-                {/* Customer Image */}
                 <div className="flex justify-center">
                   <img
                     src={item.image}
@@ -104,34 +90,24 @@ const Testimonials = () => {
                   />
                 </div>
 
-                {/* Stars */}
                 <div className="flex justify-center gap-1 text-yellow-400 mt-4">
                   {[...Array(item.rating)].map((_, index) => (
                     <FaStar key={index} />
                   ))}
                 </div>
 
-                {/* Review */}
                 <p className="text-zinc-600 text-center mt-5 leading-relaxed">
                   "{item.review}"
                 </p>
 
-                {/* Customer Info */}
                 <div className="mt-6 text-center">
-                  <h3 className="text-xl font-bold text-zinc-800">
-                    {item.name}
-                  </h3>
-
-                  <p className="text-orange-500 font-medium">
-                    {item.profession}
-                  </p>
+                  <h3 className="text-xl font-bold text-zinc-800">{item.name}</h3>
+                  <p className="text-orange-500 font-medium">{item.profession}</p>
                 </div>
-
               </div>
             </SwiperSlide>
           ))}
         </Swiper>
-
       </div>
     </section>
   );

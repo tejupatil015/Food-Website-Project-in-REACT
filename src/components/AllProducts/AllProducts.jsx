@@ -1,15 +1,13 @@
-import React from 'react'
-import bgAll from "../../assets/all-banner.jpg"
-import CategoryPage from "../Catagorypage/Catagorypage";
+import React from 'react';
+import bgAll from '../../assets/all-banner.jpg';
+import CategoryPage from '../CategoryPage/CategoryPage';
 
 const AllProducts = () => {
   return (
     <div>
-        <h1>
-               <CategoryPage title="All Products" bgimage={bgAll} categories={['All']}/>
-        </h1>
+      <CategoryPage title="All Products" bgimage={bgAll} categories={['All']} />
     </div>
-  )
-}
+  );
+};
 
-export default AllProducts
+export default AllProducts;
