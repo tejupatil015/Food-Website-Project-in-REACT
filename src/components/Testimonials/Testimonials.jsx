@@ -15,7 +15,7 @@ import Customer5 from '../../assets/customer5.jpg';
 const reviews = [
   {
     id: 1,
-    name: 'Tejashri Patil',
+    name: 'Rani Mishra',
     profession: 'Food Blogger',
     rating: 5,
     image: Customer1,
@@ -24,7 +24,7 @@ const reviews = [
   },
   {
     id: 2,
-    name: 'Dheeraj Mane',
+    name: 'Roni Cakker',
     profession: 'Chef',
     rating: 4,
     image: Customer2,
@@ -33,7 +33,7 @@ const reviews = [
   },
   {
     id: 3,
-    name: 'Aishwarya Mithari',
+    name: 'Arena json',
     profession: 'Model',
     rating: 5,
     image: Customer3,
@@ -42,7 +42,7 @@ const reviews = [
   },
   {
     id: 4,
-    name: 'Karan Kundra',
+    name: 'Karan Shine',
     profession: 'Manager',
     rating: 5,
     image: Customer4,
@@ -51,7 +51,7 @@ const reviews = [
   },
   {
     id: 5,
-    name: 'Sakshi Patil',
+    name: 'Sunidhi mane',
     profession: 'Chef',
     rating: 4,
     image: Customer5,
