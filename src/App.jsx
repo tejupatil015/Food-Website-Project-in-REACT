@@ -1,3 +1,4 @@
+
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
 import Layout from './components/Layout/Layout.jsx';
@@ -10,7 +11,7 @@ import AllProducts from './components/AllProducts/AllProducts';
 
 function App() {
   return (
-    <BrowserRouter>
+    <BrowserRouter basename="/Food-Website-Project-in-REACT">
       <Routes>
         <Route path="/" element={<Layout />}>
           <Route index element={<Home />} />
